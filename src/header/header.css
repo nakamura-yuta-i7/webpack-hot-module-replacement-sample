@@ -1,0 +1,25 @@
+header {
+  background: #18419c;
+  padding: 10px;
+  position: relative;
+}
+header * {
+  color: white;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  vertical-align: middle;
+  text-decoration: none;
+}
+header > * {
+  display: inline-block;
+}
+header nav {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+header nav ul li {
+  display: inline-block;
+  text-decoration: underline;
+}
