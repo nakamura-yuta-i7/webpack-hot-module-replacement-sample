@@ -1,5 +1,6 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
+var CopyWebpackPlugin = require("copy-webpack-plugin");
 
 var METADATA = {
   TITLE: "Webpack Dev Server",
@@ -40,6 +41,12 @@ module.exports = {
     new webpack.ProvidePlugin({
       jQuery: "jquery",
       $: "jquery"
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: 'src/api', to: 'api' },
+    ], {
+      ignore: [],
+      copyUnmodified: true,
+    }),
   ],
 }
